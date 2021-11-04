@@ -203,7 +203,7 @@ namespace M2MqttUnity.Examples
         protected override void DecodeMessage(string topic, byte[] message)
         {
             string msg = System.Text.Encoding.UTF8.GetString(message);
-            Debug.Log("Received: " + msg);
+            Debug.Log("Received topic :" + topic + ",  msg: "+ msg);
             StoreMessage(msg);
             if (topic == "M2MQTT_Unity/test")
             {
